@@ -58,3 +58,12 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
+/* Skills */
+#skills ul {
+    line-height: 2;
+}
+
+#skills li {
+    font-weight: bold;
+}
