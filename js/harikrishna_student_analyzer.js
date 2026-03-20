@@ -23,6 +23,7 @@ const students = [
     attendance: 91
 }
 ];
+//function to calculate total marks for each student
 function calculateTotal(student) {
     let total = 0;
     student.marks.forEach(m => total += m.score);
@@ -33,6 +34,8 @@ students.forEach(s => {
     console.log(`${s.name} Total Marks: ${calculateTotal(s)}`);
 });
 
+//function to calculate average marks for each student
+
 function calculateAverage(student) {
     return calculateTotal(student) / student.marks.length;
 }
@@ -40,6 +43,8 @@ function calculateAverage(student) {
 students.forEach(s => {
     console.log(`${s.name} Average: ${calculateAverage(s).toFixed(2)}`);
 });
+
+//function to find highest scorer in each subject
 function subjectHighest() {
     let subjects = {};
 
@@ -58,6 +63,7 @@ function subjectHighest() {
 
 subjectHighest();
 
+//function to find average score in each subject
 function subjectAverage() {
     let subjects = {};
 
@@ -79,6 +85,7 @@ function subjectAverage() {
 
 subjectAverage();
 
+//function to find class topper
 function findTopper() {
     let topper = null;
     let highest = 0;
@@ -95,6 +102,8 @@ function findTopper() {
 }
 
 findTopper();
+
+//function to assign grades based on average marks and attendance
 
 function getGrade(student) {
     let avg = calculateAverage(student);
