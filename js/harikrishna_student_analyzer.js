@@ -95,3 +95,28 @@ function findTopper() {
 }
 
 findTopper();
+
+function getGrade(student) {
+    let avg = calculateAverage(student);
+
+    // Check fail condition
+    let failedSubject = student.marks.find(m => m.score <= 40);
+
+    if (failedSubject) {
+        return `Fail (Failed in ${failedSubject.subject})`;
+    }
+
+    if (student.attendance < 75) {
+        return "Fail (Low Attendance)";
+    }
+
+    if (avg >= 85) return "A";
+    if (avg >= 70) return "B";
+    if (avg >= 50) return "C";
+
+    return "Fail";
+}
+
+students.forEach(s => {
+    console.log(`${s.name} Grade: ${getGrade(s)}`);
+});
