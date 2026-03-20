@@ -40,3 +40,20 @@ function calculateAverage(student) {
 students.forEach(s => {
     console.log(`${s.name} Average: ${calculateAverage(s).toFixed(2)}`);
 });
+function subjectHighest() {
+    let subjects = {};
+
+    students.forEach(s => {
+        s.marks.forEach(m => {
+            if (!subjects[m.subject] || m.score > subjects[m.subject].score) {
+                subjects[m.subject] = { name: s.name, score: m.score };
+            }
+        });
+    });
+
+    for (let sub in subjects) {
+        console.log(`Highest in ${sub}: ${subjects[sub].name} (${subjects[sub].score})`);
+    }
+}
+
+subjectHighest();
