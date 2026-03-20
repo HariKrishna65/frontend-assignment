@@ -57,3 +57,24 @@ function subjectHighest() {
 }
 
 subjectHighest();
+
+function subjectAverage() {
+    let subjects = {};
+
+    students.forEach(s => {
+        s.marks.forEach(m => {
+            if (!subjects[m.subject]) {
+                subjects[m.subject] = { total: 0, count: 0 };
+            }
+            subjects[m.subject].total += m.score;
+            subjects[m.subject].count++;
+        });
+    });
+
+    for (let sub in subjects) {
+        let avg = subjects[sub].total / subjects[sub].count;
+        console.log(`Average ${sub}: ${avg.toFixed(2)}`);
+    }
+}
+
+subjectAverage();
