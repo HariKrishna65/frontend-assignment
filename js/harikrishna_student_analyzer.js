@@ -23,3 +23,12 @@ const students = [
     attendance: 91
 }
 ];
+function calculateTotal(student) {
+    let total = 0;
+    student.marks.forEach(m => total += m.score);
+    return total;
+}
+
+students.forEach(s => {
+    console.log(`${s.name} Total Marks: ${calculateTotal(s)}`);
+});
