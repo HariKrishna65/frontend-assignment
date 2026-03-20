@@ -49,3 +49,12 @@ nav ul li a:hover {
     background: #1abc9c;
     border-radius: 5px;
 }
+
+/* Sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
