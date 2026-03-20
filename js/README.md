@@ -1,20 +1,39 @@
 # Student Performance Analyzer
 
-## Description
-This project analyzes student performance using JavaScript.
+## 1. Total Marks Calculation
+![Total Marks](./assets/total.png)
 
-## Features
-- Total marks calculation
-- Average marks
-- Subject-wise highest
-- Subject-wise average
-- Class topper
-- Grade system with fail conditions
+Explanation:
+- This output shows total marks calculated for each student.
 
-## Output Screenshot
+---
 
-![Output](./js/output.png)
+## 2. Average Marks Calculation
+![Average](./assets/average.png)
 
-## Explanation
-- This screenshot shows total marks and average calculation.
-- It also displays topper and grade logic output.
+Explanation:
+- Displays average marks per student.
+
+---
+
+## 3. Subject-wise Highest Score
+![Highest](./assets/highest.png)
+
+Explanation:
+- Shows highest scorer in each subject.
+
+---
+
+## 4. Class Topper
+![Topper](./assets/topper.png)
+
+Explanation:
+- Identifies student with highest total marks.
+
+---
+
+## 5. Grade & Fail Conditions
+![Grade](./assets/grade.png)
+
+Explanation:
+- Displays grades and fail conditions based on rules.
