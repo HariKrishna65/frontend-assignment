@@ -32,3 +32,11 @@ function calculateTotal(student) {
 students.forEach(s => {
     console.log(`${s.name} Total Marks: ${calculateTotal(s)}`);
 });
+
+function calculateAverage(student) {
+    return calculateTotal(student) / student.marks.length;
+}
+
+students.forEach(s => {
+    console.log(`${s.name} Average: ${calculateAverage(s).toFixed(2)}`);
+});
