@@ -78,3 +78,20 @@ function subjectAverage() {
 }
 
 subjectAverage();
+
+function findTopper() {
+    let topper = null;
+    let highest = 0;
+
+    students.forEach(s => {
+        let total = calculateTotal(s);
+        if (total > highest) {
+            highest = total;
+            topper = s.name;
+        }
+    });
+
+    console.log(`Class Topper: ${topper} with ${highest} marks`);
+}
+
+findTopper();
