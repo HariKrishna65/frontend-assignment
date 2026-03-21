@@ -37,3 +37,13 @@ function filterProducts() {
 
     renderProducts(filtered);
 }
+document.getElementById("sort").addEventListener("change", e => {
+    let value = e.target.value;
+
+    let sorted = [...products];
+
+    if (value === "low") sorted.sort((a,b)=>a.price-b.price);
+    if (value === "high") sorted.sort((a,b)=>b.price-a.price);
+
+    renderProducts(sorted);
+});
