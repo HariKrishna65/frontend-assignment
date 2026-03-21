@@ -84,3 +84,14 @@ function deleteProduct(id) {
     renderProducts(products);
     updateAnalytics();
 }
+
+function saveData() {
+    localStorage.setItem("products", JSON.stringify(products));
+}
+
+function loadData() {
+    let data = localStorage.getItem("products");
+    if (data) products = JSON.parse(data);
+}
+
+loadData();
