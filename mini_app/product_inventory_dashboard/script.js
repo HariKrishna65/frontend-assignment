@@ -61,3 +61,20 @@ function updateAnalytics() {
 }
 
 updateAnalytics();
+
+document.getElementById("addForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    let newProduct = {
+        id: Date.now(),
+        name: name.value,
+        price: +price.value,
+        stock: +stock.value,
+        category: category.value
+    };
+
+    products.push(newProduct);
+
+    renderProducts(products);
+    updateAnalytics();
+});
