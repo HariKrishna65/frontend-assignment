@@ -95,3 +95,17 @@ function loadData() {
 }
 
 loadData();
+
+function fetchProducts() {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(products), 1500);
+    });
+}
+
+async function init() {
+    document.getElementById("products").innerHTML = "Loading...";
+    let data = await fetchProducts();
+    renderProducts(data);
+}
+
+init();
