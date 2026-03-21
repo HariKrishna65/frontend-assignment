@@ -78,3 +78,9 @@ document.getElementById("addForm").addEventListener("submit", e => {
     renderProducts(products);
     updateAnalytics();
 });
+
+function deleteProduct(id) {
+    products = products.filter(p => p.id !== id);
+    renderProducts(products);
+    updateAnalytics();
+}
