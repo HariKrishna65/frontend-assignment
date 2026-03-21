@@ -28,3 +28,12 @@ document.getElementById("search").addEventListener("input", e => {
     let filtered = products.filter(p => p.name.toLowerCase().includes(value));
     renderProducts(filtered);
 });
+function filterProducts() {
+    let category = document.getElementById("categoryFilter").value;
+
+    let filtered = products.filter(p => {
+        return category === "all" || p.category === category;
+    });
+
+    renderProducts(filtered);
+}
