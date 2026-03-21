@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Inventory Dashboard</title>
-
-    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <h1>Product Inventory Dashboard</h1>
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Dashboard</h2>
+    <p>📦 Inventory</p>
+    <p onclick="openForm()">➕ Add Product</p>
+</div>
 
-    <!-- Controls Section -->
+<!-- Main -->
+<div class="main">
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <h1>Product Inventory Dashboard</h1>
+    </div>
+
+    <!-- Controls -->
     <div id="controls">
         <input type="text" id="search" placeholder="Search product">
 
         <select id="categoryFilter">
             <option value="all">All Categories</option>
-            <option value="electronics">Electronics</option>
-            <option value="clothing">Clothing</option>
-            <option value="books">Books</option>
         </select>
 
         <select id="sort">
@@ -32,28 +39,37 @@
             <option value="az">A-Z</option>
             <option value="za">Z-A</option>
         </select>
+
+        <label>
+            <input type="checkbox" id="lowStock"> Low Stock
+        </label>
     </div>
 
-    <!-- Analytics Section -->
+    <!-- Analytics -->
     <div id="analytics"></div>
 
-    <!-- Product Grid -->
+    <!-- Products -->
     <div id="products"></div>
 
-    <!-- Add Product Form -->
-    <form id="addForm">
+</div>
+
+<!-- Modal Form -->
+<div id="formModal" class="modal">
+    <div class="modal-content">
         <h2>Add Product</h2>
 
-        <input type="text" id="name" placeholder="Product Name" required>
-        <input type="number" id="price" placeholder="Price" required>
-        <input type="number" id="stock" placeholder="Stock" required>
-        <input type="text" id="category" placeholder="Category" required>
+        <form id="addForm">
+            <input type="text" id="name" placeholder="Product Name" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <input type="text" id="category" placeholder="Category" required>
 
-        <button type="submit">Add Product</button>
-    </form>
+            <button type="submit">Add Product</button>
+            <button type="button" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+</div>
 
-    <!-- Link JavaScript -->
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
