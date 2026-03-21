@@ -22,3 +22,9 @@ function renderProducts(list) {
 }
 
 renderProducts(products);
+
+document.getElementById("search").addEventListener("input", e => {
+    let value = e.target.value.toLowerCase();
+    let filtered = products.filter(p => p.name.toLowerCase().includes(value));
+    renderProducts(filtered);
+});
