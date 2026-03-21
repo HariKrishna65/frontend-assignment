@@ -47,3 +47,17 @@ document.getElementById("sort").addEventListener("change", e => {
 
     renderProducts(sorted);
 });
+
+function updateAnalytics() {
+    let total = products.length;
+    let value = products.reduce((sum,p)=>sum+p.price*p.stock,0);
+    let out = products.filter(p=>p.stock===0).length;
+
+    document.getElementById("analytics").innerHTML = `
+        <p>Total Products: ${total}</p>
+        <p>Total Value: ₹${value}</p>
+        <p>Out of Stock: ${out}</p>
+    `;
+}
+
+updateAnalytics();
